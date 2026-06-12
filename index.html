@@ -1,22 +1,100 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title id="tab-title">WeatherNow | Live Forecast</title>
     <link rel="icon"
-  href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌤️</text></svg>"
->
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌤️</text></svg>">
     <link href="style.css" rel="stylesheet">
-    <link  rel="stylesheet" href= https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script src="index.js" defer></script>
 </head>
+
 <body>
     <div class="container">
         <header>
             <h1 id="website-heading">
-                 <i class=" fa-regular fa-cloud"></i>Weather DashBoard</h1>
+                <i class="fa-solid fa-cloud"></i>Weather DashBoard
+            </h1>
         </header>
+        <main class="main-contents">
+            <section class="search-container">
+                <div class="search-wrapper">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="search" id="cityInput" name="search" placeholder="Enter Your City">
+                </div>
+                <button id="search-btn">search</button>
+            </section>
+            <div class="btn-box">
+                <button class="favourites-btn"><i class="filled-star fa-solid fa-star"></i> Favourites</button>
+            </div>
+
+            <div id="loader" class="loader"></div>
+            
+
+            <h2 class="section-heading"> Current Weather</h2>
+            <section class="main-section">
+
+                <div class="weather-card">
+                    <div class="weather-heading">
+                        <div class="city-name">
+                        <h2 id="cityName">Calicut </h2>
+                        <span>📍</span>
+                        </div>
+                        <i class="star fa-regular fa-star"></i>
+                    </div>
+
+                    <div class="temperature"><span id="tempDeg">30</span>
+                         <span>°C</span>
+                    </div>
+
+                    <p id="weather">Partly Cloudy 🌤️</p>
+
+                    <div class="weather-details">
+                        <span>💧 Humidity: <span id="humidity">75</span><span>%</span></span>
+                        <span>🌬️ Wind: <span id="wind-speed">12</span>km/h</span></span>
+                    </div>
+                </div>
+            </section>
+
+            <h2 class="forecast-heading">5-Day Forecast</h2>
+
+            <section class="forecast-container">
+                <div class="forecast-card">
+                    <p>Mon</p>
+                    <span>☀️</span>
+                    <p>31°C</p>
+                </div>
+
+                <div class="forecast-card">
+                    <p>Tue</p>
+                    <span>🌧️</span>
+                    <p>28°C</p>
+                </div>
+
+                <div class="forecast-card">
+                    <p>Wed</p>
+                    <span>☁️</span>
+                    <p>30°C</p>
+                </div>
+
+                <div class="forecast-card">
+                    <p>Thu</p>
+                    <span class="rainy-clouds">⛈️</span>
+                    <p>27°C</p>
+                </div>
+
+                <div class="forecast-card">
+                    <p>Fri</p>
+                    <span>☀️</span>
+                    <p>32°C</p>
+                </div>
+            </section>
+        </main>
 
     </div>
 </body>
+
 </html>
