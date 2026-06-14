@@ -1,15 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
-<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -22,10 +12,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
     <script type="module" src="getWeatherData.js" defer></script>
     <Script type="module" src="displayingWeather.js" defer></Script>
-    <Script type="module" src="userLocation.js"defer></Script>
+    <Script type="module" src="userLocation.js" defer></Script>
     <Script type="module" src="displayForecast.js" defer></Script>
     <Script type="module" src="addFavourite.js" defer></Script>
-    <Script type="module" src="index.js" defer></Script>
+    
 </head>
 
 <body>
@@ -43,12 +33,15 @@
                 </div>
                 <button id="search-btn">search</button>
             </section>
+            <button class="theme-toggle" id="theme-toggle">🌙</button>
             <div class="btn-box">
                 <button class="favourites-btn"><i class="filled-star fa-solid fa-star"></i> Favourites</button>
+                <div id="favDropdown" class="fav-dropdown">
+                </div>
             </div>
 
             <div id="loader" class="loader"></div>
-            
+
 
             <h2 class="section-heading"> Current Weather</h2>
             <section class="main-section">
@@ -56,14 +49,15 @@
                 <div class="weather-card">
                     <div class="weather-heading">
                         <div class="city-name">
-                        <h2 id="cityName">Calicut </h2>
-                        <span>📍</span>
+                            <h2 id="cityName">Calicut </h2>
+                            <span>📍</span>
                         </div>
-                        <div><i id="star" class="star fa-regular fa-star"></i><i id="the-action" class="the-action fa-solid fa-star"></i></div>
+                        <div><i id="star" class="star fa-regular fa-star"></i><i id="the-action"
+                                class="the-action fa-solid fa-star"></i></div>
                     </div>
 
                     <div class="temperature"><span id="tempDeg">30</span>
-                         <span>°C</span>
+                        <span>°C</span>
                     </div>
 
                     <p id="weather">Partly Cloudy 🌤️</p>
@@ -74,6 +68,7 @@
                     </div>
                 </div>
             </section>
+            <p id="error-message"></p>
 
             <h2 class="forecast-heading">5-Day Forecast</h2>
 
